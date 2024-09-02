@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAPI UI Tool</title>
+  <link rel="stylesheet" href="assets/swagger-ui.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+  <style>
+    body {
+        margin-bottom: 60px; /* Spazio inferiore per evitare sovrapposizioni del contenuto con il div fisso */
+    }
+
+    #ad-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        
+        padding: 10px;
+        text-align: center;
+        z-index: 1000;
+    }
+</style>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="assets/swagger-ui-bundle.js"></script>
+  <script src="assets/swagger-ui-standalone-preset.js"></script>
+  <script src="renderer.js"></script>
+  <div id="ad-container">
+    <p>Ads Here</p>
+  </div>
+</body>
+</html>

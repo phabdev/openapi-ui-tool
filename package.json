@@ -1,0 +1,43 @@
+{
+  "name": "openapi-ui-tool",
+  "version": "1.0.0",
+  "description": "A tool to generate a UI from an OpenAPI YAML file using Swagger-UI.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Fabrizio Ferrante",
+  "license": "MIT",
+  "email": "phabdev@gmail.com",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "swagger-ui-dist": "^5.17.14"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "it.phabdev.openapi-ui-tool",
+    "productName": "OpenAPI UI Tool",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
